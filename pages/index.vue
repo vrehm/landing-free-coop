@@ -1,74 +1,16 @@
 <template>
-  <div id="app">
-    <h1>vue-progress-path</h1>
+  <div
+    id="app"
+    class="container mx-auto flex flex-wrap justify-center items-center"
+  >
+    <!-- <div class="w-full">
+      <h1>vue-progress-path</h1>
 
-    <pre>{{ installCode }}</pre>
-    <pre>{{ usageCode }}</pre>
+      <pre>{{ installCode }}</pre>
+      <pre>{{ usageCode }}</pre>
+    </div> -->
 
-    <div class="view">
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        size="64"
-        rotate
-        fill-duration="2"
-        rotation-duration="1"
-      />
-
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        shape="semicircle"
-        size="64"
-      />
-
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        shape="line"
-        size="200"
-        width="200"
-        height="6"
-      />
-
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        shape="square"
-        size="64"
-        fill-duration="2"
-      />
-
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        shape="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
-        size="180"
-        fill-duration="2"
-      />
-
-      <loading-progress
-        :progress="progress"
-        :indeterminate="indeterminate"
-        :counter-clockwise="counterClockwise"
-        :hide-background="hideBackground"
-        shape="M50,3l12,36h38l-30,22l11,36l-31-21l-31,21l11-36l-30-22h38z"
-        size="100"
-        fill-duration="2"
-      />
-    </div>
-
-    <div class="settings">
+    <div class="settings w-full">
       <div>
         <input v-model="progressModel" type="range" min="-100" max="100" />
         <button @click="progress = 0">reset</button>
@@ -95,6 +37,69 @@
           hide background
         </label>
       </div>
+    </div>
+
+    <div class="w-full flex justify-center">
+      <!-- <loading-progress
+          :progress="progress"
+          :indeterminate="indeterminate"
+          :counter-clockwise="counterClockwise"
+          :hide-background="hideBackground"
+          size="64"
+          rotate
+          fill-duration="2"
+          rotation-duration="1"
+        />
+
+        <loading-progress
+          :progress="progress"
+          :indeterminate="indeterminate"
+          :counter-clockwise="counterClockwise"
+          :hide-background="hideBackground"
+          shape="semicircle"
+          size="64"
+        />
+
+        <loading-progress
+          :progress="progress"
+          :indeterminate="indeterminate"
+          :counter-clockwise="counterClockwise"
+          :hide-background="hideBackground"
+          shape="line"
+          size="200"
+          width="200"
+          height="6"
+        />
+
+        <loading-progress
+          :progress="progress"
+          :indeterminate="indeterminate"
+          :counter-clockwise="counterClockwise"
+          :hide-background="hideBackground"
+          shape="square"
+          size="64"
+          fill-duration="2"
+        /> -->
+
+      <loading-progress
+        :progress="progress"
+        :indeterminate="indeterminate"
+        :counter-clockwise="counterClockwise"
+        :hide-background="hideBackground"
+        shape="M 100 300 Q 150 50 200 300 Q 250 550 300 300 Q 350 50 400 300 Q 450 550 500 300 Q 550 50 600 300 Q 650 550 700 300"
+        size="750"
+        fill-duration="2"
+      />
+
+      <!-- <loading-progress
+          :progress="progress"
+          :indeterminate="indeterminate"
+          :counter-clockwise="counterClockwise"
+          :hide-background="hideBackground"
+          shape="M50,3l12,36h38l-30,22l11,36l-31-21l-31,21l11-36l-30-22h38z"
+          size="100"
+          fill-duration="2"
+        /> -->
     </div>
   </div>
 </template>
