@@ -1,5 +1,8 @@
 /* eslint-disable prettier/prettier */
 export default {
+    server: {
+        port: 3000
+    },
     mode: 'universal',
     /*
      ** Headers of the page
