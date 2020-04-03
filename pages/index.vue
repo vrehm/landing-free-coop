@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    class="container mx-auto flex flex-wrap justify-center items-center"
+    class="container mx-auto mt-32 px-32 flex flex-wrap justify-center items-center"
   >
     <!-- <div class="w-full">
       <h1>vue-progress-path</h1>
@@ -10,32 +10,40 @@
       <pre>{{ usageCode }}</pre>
     </div> -->
 
-    <div class="settings w-full">
-      <div>
-        <input v-model="progressModel" type="range" min="-100" max="100" />
-        <button @click="progress = 0">reset</button>
+    <div class="settings w-full flex flex-wrap justify-center">
+      <div class="w-full flex flex-wrap justify-center">
+        <input
+          v-model="progressModel"
+          type="range"
+          min="-100"
+          max="100"
+          class="w-full"
+        />
+        <button class="pr-2 underline" @click="progress = 0">reset</button>
         <span>progress {{ progressDisplay }}</span>
       </div>
 
-      <div>
-        <label>
-          <input v-model="indeterminate" type="checkbox" />
-          indeterminate
-        </label>
-      </div>
+      <div class="w-full flex justify-between">
+        <div>
+          <label>
+            <input v-model="indeterminate" type="checkbox" />
+            indeterminate
+          </label>
+        </div>
 
-      <div>
-        <label>
-          <input v-model="counterClockwise" type="checkbox" />
-          counter clockwise
-        </label>
-      </div>
+        <div>
+          <label>
+            <input v-model="counterClockwise" type="checkbox" />
+            counter clockwise
+          </label>
+        </div>
 
-      <div>
-        <label>
-          <input v-model="hideBackground" type="checkbox" />
-          hide background
-        </label>
+        <div>
+          <label>
+            <input v-model="hideBackground" type="checkbox" />
+            hide background
+          </label>
+        </div>
       </div>
     </div>
 
@@ -86,8 +94,8 @@
         :indeterminate="indeterminate"
         :counter-clockwise="counterClockwise"
         :hide-background="hideBackground"
-        shape="M 100 300 Q 150 50 200 300 Q 250 550 300 300 Q 350 50 400 300 Q 450 550 500 300 Q 550 50 600 300 Q 650 550 700 300"
-        size="750"
+        shape="M 0 200 Q 50 0 100 200 Q 150 400 200 200 Q 250 0 300 200 Q 350 400 400 200 Q 450 0 500 200 Q 550 400 600 200 Q 650 0 700 200 Q 750 400 800 200"
+        size="850"
         fill-duration="2"
       />
 
@@ -142,7 +150,7 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -186,5 +194,5 @@ pre,
 
 input[type='range'] {
   width: calc(100vw - 300px);
-}
+} */
 </style>
